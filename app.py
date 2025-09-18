@@ -20,7 +20,7 @@ with col2:
 
 # Initialize OpenAI client
 try:
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI() 
 except Exception as e:
     st.error("Please set your OPENAI_API_KEY environment variable")
     st.stop()
