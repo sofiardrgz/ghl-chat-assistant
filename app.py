@@ -6,7 +6,7 @@ import os
 # Page config with custom title and icon
 st.set_page_config(
     page_title="SmartSquatch", 
-    page_icon="🦍",
+    page_icon="https://storage.googleapis.com/msgsndr/Wj3JvHTBsQKqvP85ShhE/media/68abc9cba7e59865de33aeaa.png",
     layout="wide"
 )
 
