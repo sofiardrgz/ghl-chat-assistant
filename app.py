@@ -3,18 +3,6 @@ from openai import OpenAI
 import os
 
 
-# DEBUG CODE - ADD THIS SECTION
-st.write("🔍 DEBUG: Checking environment variables")
-api_key = os.getenv("OPENAI_API_KEY")
-if api_key:
-    st.success(f"✅ API key found: {api_key[:10]}...")
-else:
-    st.error("❌ No API key found in environment")
-    st.write("Available environment variables:")
-    env_vars = list(os.environ.keys())
-    st.write(env_vars)
-# END DEBUG CODE
-
 # Page config with custom title and icon
 st.set_page_config(
     page_title="SmartSquatch", 
