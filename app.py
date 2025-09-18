@@ -16,7 +16,7 @@ with col2:
     st.caption("Your intelligent GHL assistant")
 
 # Initialize OpenAI client - EXACTLY like OpenAI says
-client = OpenAI()
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # Initialize chat history
 if "messages" not in st.session_state:
