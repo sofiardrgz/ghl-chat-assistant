@@ -2,8 +2,33 @@ import streamlit as st
 from openai import OpenAI
 import os
 
-st.set_page_config(page_title="GHL Assistant", page_icon="🚀")
-st.title("🚀 GHL Assistant")
+
+# DEBUG CODE - ADD THIS SECTION
+st.write("🔍 DEBUG: Checking environment variables")
+api_key = os.getenv("OPENAI_API_KEY")
+if api_key:
+    st.success(f"✅ API key found: {api_key[:10]}...")
+else:
+    st.error("❌ No API key found in environment")
+    st.write("Available environment variables:")
+    env_vars = list(os.environ.keys())
+    st.write(env_vars)
+# END DEBUG CODE
+
+# Page config with custom title and icon
+st.set_page_config(
+    page_title="SmartSquatch", 
+    page_icon="🦍",
+    layout="wide"
+)
+
+# Custom header with logo and title
+col1, col2 = st.columns([1, 4])
+with col1:
+    st.image("https://storage.googleapis.com/msgsndr/Wj3JvHTBsQKqvP85ShhE/media/68abc9cba7e59865de33aeaa.png", width=100)
+with col2:
+    st.title("SmartSquatch")
+    st.caption("Your intelligent GHL assistant")
 
 # Initialize OpenAI client
 try:
